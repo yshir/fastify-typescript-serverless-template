@@ -17,9 +17,6 @@ $ npm i
 ```bash
 # development
 $ npm run dev
-
-# production mode
-$ npm run start
 ```
 
 ## Running the test
