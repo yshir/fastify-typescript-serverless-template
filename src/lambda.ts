@@ -5,4 +5,4 @@ import { createApp } from '@src/app';
 const app = createApp();
 const proxy = awsLambdaFastify(app);
 
-export default proxy;
+export const handler = proxy;

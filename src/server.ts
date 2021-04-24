@@ -1,8 +1,13 @@
+import * as dotenv from 'dotenv';
+
 import { createApp } from '@src/app';
 
+dotenv.config();
+
+const port = process.env.APP_PORT || '8080';
 const server = createApp();
 
-server.listen(8080, (err, addr) => {
+server.listen(port, (err, addr) => {
   if (err) {
     console.error(err);
     process.exit(1);

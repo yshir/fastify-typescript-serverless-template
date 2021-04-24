@@ -1,0 +1,44 @@
+service: fastify-typescript-serverless-example
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: ap-northeast-1
+  role: ${env:AWS_LAMBDA_ROLE_ARN}
+  stage: ${opt:stage, self:custom.defaultStage}
+  timeout: 60
+
+plugins:
+  - serverless-layers
+
+custom:
+  defaultStage: development
+  serverless-layers:
+    layersDeploymentBucket: fastify-typescript-serverless-example-lambda-layers--${self:provider.stage}
+
+package:
+  individually: true
+  include:
+    - dist/**
+    - .env
+  exclude:
+    - '**'
+
+functions:
+  app:
+    name: ${self:service}--${self:provider.stage}
+    handler: dist/lambda.handler
+    environment:
+      APP_ENV: ${env:APP_ENV}
+      NODE_ENV: ${env:NODE_ENV}
+      REVISION_HASH: ${env:REVISION_HASH}
+      REVISION_TIMESTAMP: ${env:REVISION_TIMESTAMP}
+    events:
+      - http:
+          cors: true
+          path: '/'
+          method: any
+      - http:
+          cors: true
+          path: '{proxy+}'
+          method: any
