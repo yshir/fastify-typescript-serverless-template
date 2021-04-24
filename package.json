@@ -13,7 +13,6 @@
     "eslint:fix": "eslint . --ext .js,.ts --fix",
     "prettier:fix": "prettier --write .",
     "prepare": "husky install",
-    "sls:version": "./node_modules/.bin/serverless --version",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
