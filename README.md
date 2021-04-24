@@ -21,3 +21,9 @@ $ npm run dev
 # production mode
 $ npm run start
 ```
+
+## Running the test
+
+```bash
+$ npm test
+```

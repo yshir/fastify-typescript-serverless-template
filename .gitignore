@@ -40,4 +40,8 @@ dist/**/*
 # ignore yarn.lock
 yarn.lock
 
+# Coverage
+.coverage
+
+# Compiled files
 dist
