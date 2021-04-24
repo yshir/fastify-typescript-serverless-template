@@ -14,7 +14,7 @@ plugins:
 custom:
   defaultStage: development
   serverless-layers:
-    layersDeploymentBucket: fastify-typescript-serverless-example-lambda-layers--${self:provider.stage}
+    layersDeploymentBucket: fastify-typescript-serverless-example-layers--${self:provider.stage}
 
 package:
   individually: true
