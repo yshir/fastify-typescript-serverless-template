@@ -3,6 +3,7 @@
   "include": ["src/**/*"],
   "exclude": ["src/server.ts"],
   "compilerOptions": {
-    "noEmit": false
+    "noEmit": false,
+    "noImplicitAny": false
   }
 }
