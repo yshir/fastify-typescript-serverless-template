@@ -4,7 +4,8 @@ provider:
   name: aws
   runtime: nodejs14.x
   region: ap-northeast-1
-  role: ${env:AWS_LAMBDA_ROLE_ARN}
+  iam:
+    role: ${env:AWS_LAMBDA_ROLE_ARN}
   stage: ${opt:stage, self:custom.defaultStage}
   timeout: 60
 
