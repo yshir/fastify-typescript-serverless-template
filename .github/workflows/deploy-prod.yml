@@ -45,7 +45,7 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
-          npm install -g serverless serverless-layers
+          npm install -g serverless serverless-layers tsc-alias
 
       - name: Build app
         run: npm run build
