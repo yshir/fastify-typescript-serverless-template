@@ -43,7 +43,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install serverless -g
+          npm install serverless serverless-layers -g
           npm install
 
       - name: Build app
