@@ -13,6 +13,7 @@ jobs:
     name: Deploy to Production
     runs-on: ubuntu-latest
     env:
+      APP_NAME: fastify-typescript-serverless-example
       APP_ENV: production
       NODE_ENV: production
 
@@ -68,6 +69,7 @@ jobs:
         run: |
           sls deploy --stage ${{ env.APP_ENV }}
         env:
+          APP_NAME: ${{ env.APP_NAME }}
           APP_ENV: ${{ env.APP_ENV }}
           NODE_ENV: ${{ env.NODE_ENV }}
           REVISION_HASH: ${{ github.sha }}

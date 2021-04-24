@@ -1,13 +1,13 @@
-service: fastify-typescript-serverless-example
+service: ${env:APP_NAME}
 
 provider:
   name: aws
   runtime: nodejs14.x
   region: ap-northeast-1
-  iam:
-    role: ${env:AWS_LAMBDA_ROLE_ARN}
   stage: ${opt:stage, self:custom.defaultStage}
   timeout: 60
+  iam:
+    role: ${env:AWS_LAMBDA_ROLE_ARN}
 
 plugins:
   - serverless-layers
@@ -15,7 +15,7 @@ plugins:
 custom:
   defaultStage: development
   serverless-layers:
-    layersDeploymentBucket: fastify-typescript-serverless-example-layers--${self:provider.stage}
+    layersDeploymentBucket: ${env:APP_NAME}-layers--${self:provider.stage}
 
 package:
   individually: true
