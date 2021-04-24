@@ -44,7 +44,7 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install
-          npm install serverless serverless-layers
+          npm install -g serverless serverless-layers
 
       - name: Build app
         run: npm run build
@@ -66,7 +66,7 @@ jobs:
 
       - name: Deploy to AWS Lambda
         run: |
-          ./node_modules/.bin/serverless deploy --stage ${{ env.APP_ENV }}
+          sls deploy --stage ${{ env.APP_ENV }}
         env:
           APP_ENV: ${{ env.APP_ENV }}
           NODE_ENV: ${{ env.NODE_ENV }}
