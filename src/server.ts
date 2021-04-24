@@ -4,7 +4,7 @@ import { createApp } from '@src/app';
 
 dotenv.config();
 
-const port = process.env.APP_PORT || '8080';
+const port = process.env['APP_PORT'] || '8080';
 const server = createApp();
 
 server.listen(port, (err, addr) => {
