@@ -1,17 +1,17 @@
-import fastify from 'fastify'
+import fastify from 'fastify';
 
-const server = fastify()
+const server = fastify();
 
-server.get('/ping', async(req, reply) => {
+server.get('/ping', async (_req, _reply) => {
   return {
     ts: Date.now(),
-  }
-})
+  };
+});
 
 server.listen(8080, (err, addr) => {
-  if (err){
-    console.error(err)
-    process.exit(1)
+  if (err) {
+    console.error(err);
+    process.exit(1);
   }
-  console.log(`🚀 Server listening at ${addr}`)
-})
+  console.log(`🚀 Server listening at ${addr}`);
+});
