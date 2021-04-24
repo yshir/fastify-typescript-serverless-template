@@ -1,12 +1,6 @@
-import fastify from 'fastify';
+import { createApp } from '@src/app';
 
-const server = fastify();
-
-server.get('/ping', async (_req, _reply) => {
-  return {
-    ts: Date.now(),
-  };
-});
+const server = createApp();
 
 server.listen(8080, (err, addr) => {
   if (err) {
