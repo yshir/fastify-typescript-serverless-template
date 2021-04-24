@@ -7,14 +7,14 @@
     "build": "tsc -p tsconfig.json",
     "dev": "ts-node-dev --respawn -r tsconfig-paths/register src/server.ts",
     "start": "node dist/server.js",
-    "eslint": "eslint . --ext .js,.ts,.jsx,.tsx ",
-    "eslint:fix": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
+    "eslint": "eslint . --ext .js,.ts ",
+    "eslint:fix": "eslint . --ext .js,.ts --fix",
     "prettier:fix": "prettier --write .",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
+    "*.{js,ts}": [
       "npm run eslint:fix",
       "npm run prettier:fix"
     ]
