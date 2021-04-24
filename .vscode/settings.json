@@ -4,5 +4,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "cSpell.words": ["respawn"]
+  "cSpell.words": [
+    "respawn",
+    "reviewdog"
+  ]
 }
