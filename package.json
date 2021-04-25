@@ -26,7 +26,7 @@
   },
   "keywords": [],
   "author": "yshir",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yshir/fastify-typescript-serverless-example/issues"
   },
