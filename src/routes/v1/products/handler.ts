@@ -30,7 +30,7 @@ export const getProductByIdHandler = async (
   const id = ProductId.of(req.params.id);
   const product = await repository.findById(id);
   if (!product) {
-    return reply.callNotFound();
+    return reply.notFound(`product not found: (id: ${id})`);
   }
 
   const response: FromSchema<typeof getProductByIdSchema.response['200']> = {
