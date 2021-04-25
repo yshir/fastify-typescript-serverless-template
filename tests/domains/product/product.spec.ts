@@ -39,21 +39,6 @@ describe('Product', () => {
   });
 
   describe('publish', () => {
-    it('should change status to published', () => {
-      const product = createProduct({ status: 'unpublished' });
-      product.publish();
-      expect(product.status).toEqual('published');
-    });
-
-    it('cannot change status if this product archived', () => {
-      const product = createProduct({ status: 'archived' });
-      expect(() => {
-        product.publish();
-      }).toThrow(DomainException);
-    });
-  });
-
-  describe('publish', () => {
     describe('not archived product', () => {
       it('should change status to published', () => {
         const product = createProduct({ status: 'unpublished' });
