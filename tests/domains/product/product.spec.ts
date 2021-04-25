@@ -1,6 +1,7 @@
 import { Product } from '@src/domains/product/product';
 import { ProductId } from '@src/domains/product/product-id';
 import { ProductName } from '@src/domains/product/product-name';
+import { ProductStatus } from '@src/domains/product/product-status';
 
 import { createProduct } from '@tests/fixtures/createProduct';
 
@@ -9,6 +10,7 @@ describe('Product', () => {
     it('is valid, should create', () => {
       const result = Product.create(ProductId.gen(), {
         name: ProductName.of('name'),
+        status: ProductStatus.of('published'),
       });
       expect(result).toEqual(expect.any(Product));
     });
@@ -25,6 +27,13 @@ describe('Product', () => {
     it('should return name', () => {
       const product = createProduct({ name: 'name' });
       expect(product.name).toEqual('name');
+    });
+  });
+
+  describe('status', () => {
+    it('should return status', () => {
+      const product = createProduct({ status: 'unpublished' });
+      expect(product.status).toEqual('unpublished');
     });
   });
 });
