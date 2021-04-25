@@ -3,7 +3,9 @@ export const getProductsSchema = {
     200: {
       type: 'object',
       properties: {
-        count: { type: 'number' },
+        count: {
+          type: 'number',
+        },
         products: {
           type: 'array',
           items: {
@@ -34,9 +36,14 @@ export const getProductByIdSchema = {
     200: {
       type: 'object',
       properties: {
-        id: { type: 'string', format: 'uuid' },
-        name: { type: 'string' },
-        status: { type: 'string' },
+        product: {
+          type: 'object',
+          properties: {
+            id: { type: 'string', format: 'uuid' },
+            name: { type: 'string' },
+            status: { type: 'string' },
+          },
+        },
       },
       additionalProperties: false,
     },

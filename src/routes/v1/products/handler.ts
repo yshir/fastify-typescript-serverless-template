@@ -34,9 +34,11 @@ export const getProductByIdHandler = async (
   }
 
   const response: FromSchema<typeof getProductByIdSchema.response['200']> = {
-    id: product.id.value,
-    name: product.name.value,
-    status: product.status.value,
+    product: {
+      id: product.id.value,
+      name: product.name.value,
+      status: product.status.value,
+    },
   };
   reply.send(response);
 };
