@@ -6,5 +6,8 @@ export const config = {
   app: {
     env: process.env['APP_ENV'] || 'development',
     port: +(process.env['APP_PORT'] || 3001),
+    logger: {
+      level: process.env['APP_LOGGER_LEVEL'] || 'trace',
+    },
   },
 };
