@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+import * as uuid from 'uuid';
 
 export const genUuid = (): string => {
   return uuid.v4();
