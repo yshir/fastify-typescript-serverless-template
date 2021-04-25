@@ -1,10 +1,7 @@
-import * as dotenv from 'dotenv';
-
 import { createApp } from '@src/app';
+import { config } from '@src/config';
 
-dotenv.config();
-
-const port = process.env['APP_PORT'] || '8080';
+const { port } = config.app;
 const server = createApp();
 
 server.listen(port, (err, addr) => {
@@ -12,5 +9,5 @@ server.listen(port, (err, addr) => {
     console.error(err);
     process.exit(1);
   }
-  console.log(`🚀 Server listening at ${addr}`);
+  console.log(`🚀 Server listening at ${addr}/ping`);
 });
