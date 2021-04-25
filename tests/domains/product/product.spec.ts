@@ -9,32 +9,34 @@ import { createProduct } from '@tests/fixtures/createProduct';
 describe('Product', () => {
   describe('create', () => {
     it('is valid, should create', () => {
-      const result = Product.create(ProductId.gen(), {
+      const id = ProductId.gen();
+      const result = Product.create(id, {
         name: ProductName.of('name'),
         status: ProductStatus.of('published'),
       });
       expect(result).toEqual(expect.any(Product));
+      expect(result.id.equals(id)).toBe(true);
     });
   });
 
   describe('id', () => {
     it('should return id', () => {
       const product = createProduct({ id: '13BBFA5F-C35D-4DB5-B464-1A1D6E36481B' });
-      expect(product.id).toEqual('13BBFA5F-C35D-4DB5-B464-1A1D6E36481B');
+      expect(product.id.equals(ProductId.of('13BBFA5F-C35D-4DB5-B464-1A1D6E36481B'))).toBe(true);
     });
   });
 
   describe('name', () => {
     it('should return name', () => {
       const product = createProduct({ name: 'name' });
-      expect(product.name).toEqual('name');
+      expect(product.name.equals(ProductName.of('name'))).toBe(true);
     });
   });
 
   describe('status', () => {
     it('should return status', () => {
       const product = createProduct({ status: 'unpublished' });
-      expect(product.status).toEqual('unpublished');
+      expect(product.status.equals(ProductStatus.of('unpublished'))).toBe(true);
     });
   });
 
@@ -43,7 +45,7 @@ describe('Product', () => {
       it('should change status to published', () => {
         const product = createProduct({ status: 'unpublished' });
         product.publish();
-        expect(product.status).toEqual('published');
+        expect(product.status.equals(ProductStatus.of('published'))).toBe(true);
       });
     });
 
@@ -62,7 +64,7 @@ describe('Product', () => {
       it('should change status to unpublished', () => {
         const product = createProduct({ status: 'published' });
         product.unpublish();
-        expect(product.status).toEqual('unpublished');
+        expect(product.status.equals(ProductStatus.of('unpublished'))).toBe(true);
       });
     });
 
@@ -80,7 +82,7 @@ describe('Product', () => {
     it('should change status to archived', () => {
       const product = createProduct({ status: 'published' });
       product.archive();
-      expect(product.status).toEqual('archived');
+      expect(product.status.equals(ProductStatus.of('archived'))).toBe(true);
     });
   });
 });

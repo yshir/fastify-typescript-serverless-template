@@ -5,6 +5,6 @@ describe('genUuid', () => {
   it('should return a uuid v4', () => {
     const result = genUuid();
     expect(result).toBeDefined();
-    expect(isUuid(result)).toEqual(true);
+    expect(isUuid(result)).toBe(true);
   });
 });

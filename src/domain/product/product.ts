@@ -15,16 +15,16 @@ export class Product extends Entity<ProductId, Props> {
     super(id, props);
   }
 
-  public get id(): ProductId['value'] {
-    return this._id.value;
+  public get id(): ProductId {
+    return this._id;
   }
 
-  public get name(): ProductName['value'] {
-    return this._props.name.value;
+  public get name(): ProductName {
+    return this._props.name;
   }
 
-  public get status(): ProductStatus['value'] {
-    return this._props.status.value;
+  public get status(): ProductStatus {
+    return this._props.status;
   }
 
   public static create(id: ProductId, props: Props): Product {
