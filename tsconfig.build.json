@@ -4,6 +4,7 @@
   "exclude": ["src/server.ts"],
   "compilerOptions": {
     "noEmit": false,
-    "noImplicitAny": false // NOTE: In production, type declaration file not installed
+    "noImplicitAny": false, // NOTE: In production, type declaration file not installed
+    "types": ["node"]
   }
 }
