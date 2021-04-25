@@ -9,5 +9,5 @@ server.listen(port, (err, addr) => {
     console.error(err);
     process.exit(1);
   }
-  console.log(`🚀 Server listening at ${addr}/ping`);
+  console.log(`🚀 Server listening at ${addr}/healthcheck`);
 });

@@ -1,6 +1,7 @@
 import fastify, { FastifyInstance } from 'fastify';
 
 import { config } from '@src/config';
+import routes from '@src/routes';
 
 export const createApp = (): FastifyInstance => {
   const app = fastify({
@@ -9,11 +10,7 @@ export const createApp = (): FastifyInstance => {
     },
   });
 
-  app.get('/ping', async (_req, _reply) => {
-    return {
-      ts: Date.now(),
-    };
-  });
+  app.register(routes, { prefix: '/' });
 
   return app;
 };

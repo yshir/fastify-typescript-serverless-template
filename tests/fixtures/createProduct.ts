@@ -3,7 +3,7 @@ import { Product } from '@src/domain/product/product';
 import { ProductId } from '@src/domain/product/product-id';
 import { ProductName } from '@src/domain/product/product-name';
 import { ProductStatus } from '@src/domain/product/product-status';
-import { genUuid } from '@src/lib/utils/gen-uuid';
+import { genUuid } from '@src/lib/utils/uuid';
 
 type Source = {
   id?: ProductId['value'];
