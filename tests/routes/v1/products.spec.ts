@@ -54,4 +54,14 @@ describe('GET: /v1/products/:id', () => {
       expect(result.product).toHaveProperty('status');
     });
   });
+
+  describe('not exists', () => {
+    it('returns 404', async () => {
+      const res = await getFastify().inject({
+        method: 'GET',
+        url: '/v1/products/aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
+      });
+      expect(res.statusCode).toBe(404);
+    });
+  });
 });
