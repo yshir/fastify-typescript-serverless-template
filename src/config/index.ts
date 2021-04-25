@@ -9,5 +9,6 @@ export const config = {
     logger: {
       level: process.env['APP_LOGGER_LEVEL'] || 'trace',
     },
+    cors: process.env['APP_CORS'] ? new RegExp(process.env['APP_CORS']) : false,
   },
 };
