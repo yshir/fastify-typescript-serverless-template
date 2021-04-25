@@ -1,10 +1,10 @@
 export abstract class Entity<T, U> {
   protected readonly _id: T;
-  protected props: U;
+  protected _props: U;
 
-  protected constructor(_id: T, props: U) {
+  protected constructor(_id: T, _props: U) {
     this._id = _id;
-    this.props = props;
+    this._props = _props;
   }
 
   public equals(other: this): boolean {

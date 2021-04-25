@@ -11,7 +11,7 @@ const config = {
   trailingComma: 'all',
   useTabs: false,
   // addons
-  importOrder: ['^@src/(.*)$', '^[./]'],
+  importOrder: ['^@src/(.*)$', '^@tests/(.*)$', '^[./]'],
   importOrderSeparation: true,
 };
 
