@@ -1,8 +1,8 @@
-import { Product } from '@src/domains/product/product';
-import { ProductId } from '@src/domains/product/product-id';
-import { ProductName } from '@src/domains/product/product-name';
-import { ProductStatus } from '@src/domains/product/product-status';
-import { DomainException } from '@src/domains/shared/domain-exception';
+import { Product } from '@src/domain/product/product';
+import { ProductId } from '@src/domain/product/product-id';
+import { ProductName } from '@src/domain/product/product-name';
+import { ProductStatus } from '@src/domain/product/product-status';
+import { DomainException } from '@src/domain/shared/domain-exception';
 
 import { createProduct } from '@tests/fixtures/createProduct';
 

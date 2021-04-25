@@ -1,5 +1,5 @@
-import { DomainException } from '@src/domains/shared/domain-exception';
-import { PrimitiveValueObject } from '@src/domains/shared/primitive-value-object';
+import { DomainException } from '@src/domain/shared/domain-exception';
+import { PrimitiveValueObject } from '@src/domain/shared/primitive-value-object';
 
 type Value = string;
 

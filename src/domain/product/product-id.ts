@@ -1,5 +1,5 @@
-import { DomainException } from '@src/domains/shared/domain-exception';
-import { PrimitiveValueObject } from '@src/domains/shared/primitive-value-object';
+import { DomainException } from '@src/domain/shared/domain-exception';
+import { PrimitiveValueObject } from '@src/domain/shared/primitive-value-object';
 import { genUuid } from '@src/lib/utils/gen-uuid';
 import { isUuid } from '@src/lib/utils/is-uuid';
 

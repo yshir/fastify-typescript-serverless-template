@@ -1,4 +1,4 @@
-import { Entity } from '@src/domains/shared/entity';
+import { Entity } from '@src/domain/shared/entity';
 
 import { DomainException } from '../shared/domain-exception';
 import { ProductId } from './product-id';

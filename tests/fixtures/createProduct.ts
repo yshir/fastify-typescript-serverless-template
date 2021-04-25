@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Product } from '@src/domains/product/product';
-import { ProductId } from '@src/domains/product/product-id';
-import { ProductName } from '@src/domains/product/product-name';
-import { ProductStatus } from '@src/domains/product/product-status';
+import { Product } from '@src/domain/product/product';
+import { ProductId } from '@src/domain/product/product-id';
+import { ProductName } from '@src/domain/product/product-name';
+import { ProductStatus } from '@src/domain/product/product-status';
 import { genUuid } from '@src/lib/utils/gen-uuid';
 
 type Source = {

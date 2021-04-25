@@ -1,5 +1,5 @@
-import { ProductName } from '@src/domains/product/product-name';
-import { DomainException } from '@src/domains/shared/domain-exception';
+import { ProductName } from '@src/domain/product/product-name';
+import { DomainException } from '@src/domain/shared/domain-exception';
 
 describe('ProductName', () => {
   describe('of', () => {

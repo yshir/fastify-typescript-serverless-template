@@ -1,5 +1,5 @@
-import { ProductStatus } from '@src/domains/product/product-status';
-import { DomainException } from '@src/domains/shared/domain-exception';
+import { ProductStatus } from '@src/domain/product/product-status';
+import { DomainException } from '@src/domain/shared/domain-exception';
 
 describe('ProductStatus', () => {
   describe('construct', () => {
