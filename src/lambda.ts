@@ -1,8 +1,8 @@
 import awsLambdaFastify from 'aws-lambda-fastify';
 
-import { createApp } from '@src/app';
+import { buildFastify } from '@src/app';
 
-const app = createApp();
-const proxy = awsLambdaFastify(app);
+const fastify = buildFastify();
+const proxy = awsLambdaFastify(fastify);
 
 export const handler = proxy;

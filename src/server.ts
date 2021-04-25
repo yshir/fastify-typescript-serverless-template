@@ -1,10 +1,10 @@
-import { createApp } from '@src/app';
+import { buildFastify } from '@src/app';
 import { config } from '@src/config';
 
 const { port } = config.app;
-const server = createApp();
+const fastify = buildFastify();
 
-server.listen(port, (err, addr) => {
+fastify.listen(port, (err, addr) => {
   if (err) {
     console.error(err);
     process.exit(1);

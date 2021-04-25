@@ -1,16 +1,17 @@
-import fastify, { FastifyInstance } from 'fastify';
+import Fastify, { FastifyInstance, FastifyServerOptions } from 'fastify';
 
 import { config } from '@src/config';
 import routes from '@src/routes';
 
-export const createApp = (): FastifyInstance => {
-  const app = fastify({
+export const buildFastify = (opts: FastifyServerOptions = {}): FastifyInstance => {
+  const fastify = Fastify({
+    ...opts,
     logger: {
       level: config.app.logger.level,
     },
   });
 
-  app.register(routes, { prefix: '/' });
+  fastify.register(routes, { prefix: '/' });
 
-  return app;
+  return fastify;
 };
