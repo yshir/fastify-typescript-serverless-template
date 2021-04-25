@@ -1,9 +1,9 @@
 import { DomainException } from '@src/domain/shared/domain-exception';
-import { PrimitiveValueObject } from '@src/domain/shared/primitive-value-object';
+import { ValueObject } from '@src/domain/shared/value-object';
 
 type Value = string;
 
-export class ProductName extends PrimitiveValueObject<Value> {
+export class ProductName extends ValueObject<Value> {
   static readonly MAX_LENGTH = 255;
 
   private constructor(val: Value) {

@@ -1,9 +1,9 @@
 import { DomainException } from '@src/domain/shared/domain-exception';
-import { PrimitiveValueObject } from '@src/domain/shared/primitive-value-object';
+import { ValueObject } from '@src/domain/shared/value-object';
 import { genUuid } from '@src/lib/utils/gen-uuid';
 import { isUuid } from '@src/lib/utils/is-uuid';
 
-export class ProductId extends PrimitiveValueObject<string> {
+export class ProductId extends ValueObject<string> {
   private constructor(val: string) {
     super(val);
   }

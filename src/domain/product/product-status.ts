@@ -1,9 +1,9 @@
 import { DomainException } from '@src/domain/shared/domain-exception';
-import { PrimitiveValueObject } from '@src/domain/shared/primitive-value-object';
+import { ValueObject } from '@src/domain/shared/value-object';
 
 type Value = typeof ProductStatus.STATUSES[number];
 
-export class ProductStatus extends PrimitiveValueObject<Value> {
+export class ProductStatus extends ValueObject<Value> {
   static STATUSES = ['published', 'unpublished', 'archived'] as const;
 
   private constructor(val: Value) {
