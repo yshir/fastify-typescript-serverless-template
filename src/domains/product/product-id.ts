@@ -13,9 +13,18 @@ export class ProductId extends PrimitiveValueObject<string> {
   }
 
   public static of(val: string): ProductId {
-    if (!isUuid(val)) {
-      throw new DomainException(`argument is not uuid: ${val}`);
+    const instance = new ProductId(val);
+    instance.validate();
+
+    return instance;
+  }
+
+  /**
+   * @throws {DomainException}
+   */
+  private validate(): void {
+    if (!isUuid(this.value)) {
+      throw new DomainException(`argument is not uuid: ${this.value}`);
     }
-    return new ProductId(val);
   }
 }
