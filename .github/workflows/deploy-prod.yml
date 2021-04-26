@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       NODE_ENV: production
-      APP_NAME: fastify-typescript-serverless-example
+      APP_NAME: fastify-typescript-serverless-template
       APP_ENV: production
 
     steps:

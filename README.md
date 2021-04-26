@@ -1,4 +1,4 @@
-# fastify-typescript-serverless-example
+# fastify-typescript-serverless-template
 
 ## Description
 

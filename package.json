@@ -1,7 +1,7 @@
 {
-  "name": "fastify-typescript-serverless-example",
+  "name": "fastify-typescript-serverless-template",
   "version": "1.0.0",
-  "description": "fastify-typescript-serverless-example",
+  "description": "fastify-typescript-serverless-template",
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
@@ -22,15 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yshir/fastify-typescript-serverless-example.git"
+    "url": "git+https://github.com/yshir/fastify-typescript-serverless-template.git"
   },
   "keywords": [],
   "author": "yshir",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yshir/fastify-typescript-serverless-example/issues"
+    "url": "https://github.com/yshir/fastify-typescript-serverless-template/issues"
   },
-  "homepage": "https://github.com/yshir/fastify-typescript-serverless-example#readme",
+  "homepage": "https://github.com/yshir/fastify-typescript-serverless-template#readme",
   "dependencies": {
     "aws-lambda-fastify": "^1.4.4",
     "dotenv": "^8.2.0",
