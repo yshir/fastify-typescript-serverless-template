@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Product } from '@src/domain/product/product';
 import { ProductId } from '@src/domain/product/product-id';
 import { ProductName } from '@src/domain/product/product-name';
