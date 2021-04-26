@@ -2,7 +2,7 @@ import { Product } from '@src/domain/product/product';
 import { ProductId } from '@src/domain/product/product-id';
 import { ProductName } from '@src/domain/product/product-name';
 import { ProductStatus } from '@src/domain/product/product-status';
-import { DomainException } from '@src/domain/shared/domain-exception';
+import { DomainException } from '@src/exceptions/domain-exception';
 
 import { createProduct } from '@tests/fixtures/createProduct';
 

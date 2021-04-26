@@ -1,5 +1,5 @@
-import { DomainException } from '@src/domain/shared/domain-exception';
-import { ValueObject } from '@src/domain/shared/value-object';
+import { DomainException } from '@src/exceptions/domain-exception';
+import { ValueObject } from '@src/lib/value-object';
 
 type Value = string;
 

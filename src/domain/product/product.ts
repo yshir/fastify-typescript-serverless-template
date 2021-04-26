@@ -1,6 +1,6 @@
-import { Entity } from '@src/domain/shared/entity';
+import { DomainException } from '@src/exceptions/domain-exception';
+import { Entity } from '@src/lib/entity';
 
-import { DomainException } from '../shared/domain-exception';
 import { ProductId } from './product-id';
 import { ProductName } from './product-name';
 import { ProductStatus } from './product-status';

@@ -1,6 +1,6 @@
-import { DomainException } from '@src/domain/shared/domain-exception';
-import { ValueObject } from '@src/domain/shared/value-object';
+import { DomainException } from '@src/exceptions/domain-exception';
 import { genUuid, isUuid } from '@src/lib/uuid';
+import { ValueObject } from '@src/lib/value-object';
 
 export class ProductId extends ValueObject<string> {
   private constructor(val: string) {
