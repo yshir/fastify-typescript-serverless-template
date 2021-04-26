@@ -2,12 +2,14 @@ import { FastifyReply, FastifyRequest } from 'fastify';
 import { FromSchema } from 'json-schema-to-ts';
 
 import { ProductId } from '@src/domain/product/product-id';
-import { MemoryProductRepository } from '@src/infrastructure/memory/memory-product-repository';
+import { ProductRepository } from '@src/domain/product/product-repository';
+import { container } from '@src/provider';
 
 import { getProductByIdSchema, getProductsSchema } from './schema';
 
+const repository = container.get<ProductRepository>('productRepository');
+
 export const getProductsHandler = async (_req: FastifyRequest, reply: FastifyReply): Promise<void> => {
-  const repository = new MemoryProductRepository();
   const products = await repository.findAll();
 
   const response: FromSchema<typeof getProductsSchema.response['200']> = {
@@ -25,8 +27,6 @@ export const getProductByIdHandler = async (
   req: FastifyRequest<{ Params: FromSchema<typeof getProductByIdSchema.params> }>,
   reply: FastifyReply,
 ): Promise<void> => {
-  const repository = new MemoryProductRepository();
-
   const id = ProductId.of(req.params.id);
   const product = await repository.findById(id);
   if (!product) {

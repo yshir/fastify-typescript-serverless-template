@@ -1,4 +1,4 @@
-import { genUuid, isUuid, UUID_REGEX } from '@src/lib/utils/uuid';
+import { genUuid, isUuid, UUID_REGEX } from '@src/lib/uuid';
 
 describe('uuid', () => {
   describe('genUuid', () => {

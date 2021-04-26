@@ -1,6 +1,7 @@
 import Fastify, { FastifyInstance, FastifyServerOptions } from 'fastify';
 import fastifyCors from 'fastify-cors';
 import fastifySensible from 'fastify-sensible';
+import 'reflect-metadata';
 
 import { config } from '@src/config';
 import routes from '@src/routes';

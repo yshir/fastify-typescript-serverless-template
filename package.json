@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
-    "dev": "ts-node-dev --respawn -r tsconfig-paths/register src/server.ts",
+    "dev": "ts-node-dev --respawn -r tsconfig-paths/register src/bootstrap/server.ts",
     "test": "jest",
     "test:cov": "jest --coverage",
     "eslint": "eslint . --ext .js,.ts ",
@@ -37,6 +37,8 @@
     "fastify": "^3.15.0",
     "fastify-cors": "^5.2.0",
     "fastify-sensible": "^3.1.1",
+    "inversify": "^5.1.1",
+    "reflect-metadata": "^0.1.13",
     "shallow-equal-object": "^1.1.1",
     "uuid": "^8.3.2"
   },

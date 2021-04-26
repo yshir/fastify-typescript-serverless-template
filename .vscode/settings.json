@@ -4,5 +4,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "cSpell.words": ["healthcheck", "respawn", "reviewdog", "typebox"]
+  "cSpell.words": [
+    "healthcheck",
+    "inversify",
+    "respawn",
+    "reviewdog",
+    "typebox"
+  ]
 }
