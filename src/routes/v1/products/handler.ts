@@ -2,15 +2,14 @@ import { FastifyReply, FastifyRequest } from 'fastify';
 import { FromSchema } from 'json-schema-to-ts';
 
 import { ProductId } from '@src/domain/product/product-id';
-import { ProductRepository } from '@src/domain/product/product-repository';
 import { container } from '@src/provider';
+import { ProductService } from '@src/services/product-service';
 
 import { getProductByIdSchema, getProductsSchema } from './schema';
 
-const repository = container.get<ProductRepository>('productRepository');
-
 export const getProductsHandler = async (_req: FastifyRequest, reply: FastifyReply): Promise<void> => {
-  const products = await repository.findAll();
+  const service = container.get<ProductService>('productService');
+  const products = await service.findAll();
 
   const response: FromSchema<typeof getProductsSchema.response['200']> = {
     count: products.length,
@@ -27,8 +26,10 @@ export const getProductByIdHandler = async (
   req: FastifyRequest<{ Params: FromSchema<typeof getProductByIdSchema.params> }>,
   reply: FastifyReply,
 ): Promise<void> => {
+  const service = container.get<ProductService>('productService');
+
   const id = ProductId.of(req.params.id);
-  const product = await repository.findById(id);
+  const product = await service.findById(id);
   if (!product) {
     return reply.notFound(`product not found: (id: ${id})`);
   }
