@@ -5,7 +5,7 @@ import { ProductId } from '@src/domain/product/product-id';
 import { ProductRepository } from '@src/domain/product/product-repository';
 import { ProductService } from '@src/services/product-service';
 
-import { createProduct } from '@tests/fixtures/createProduct';
+import { createProduct } from '@tests/factories/createProduct';
 
 describe('ProductService', () => {
   let container: Container;

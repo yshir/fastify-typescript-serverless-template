@@ -4,7 +4,7 @@ import { ProductName } from '@src/domain/product/product-name';
 import { ProductStatus } from '@src/domain/product/product-status';
 import { DomainException } from '@src/exceptions/domain-exception';
 
-import { createProduct } from '@tests/fixtures/createProduct';
+import { createProduct } from '@tests/factories/createProduct';
 
 describe('Product', () => {
   describe('create', () => {
