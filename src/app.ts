@@ -1,7 +1,6 @@
 import Fastify, { FastifyInstance, FastifyServerOptions } from 'fastify';
 import fastifyCors from 'fastify-cors';
 import fastifySensible from 'fastify-sensible';
-import 'reflect-metadata';
 
 import { config } from '@src/config';
 import routes from '@src/routes';
@@ -13,7 +12,7 @@ export const buildFastify = (opts: FastifyServerOptions = {}): FastifyInstance =
 
   fastify.register(fastifySensible);
   fastify.register(fastifyCors, { origin: config.app.cors, credentials: true });
-  fastify.register(routes, { prefix: '/' });
+  fastify.register(routes);
 
   return fastify;
 };
