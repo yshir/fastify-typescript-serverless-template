@@ -1,7 +1,7 @@
 import awsLambdaFastify from 'aws-lambda-fastify';
 
-import { buildFastify } from '@src/app';
-import { config } from '@src/config';
+import { buildFastify } from '@src/app/app';
+import { config } from '@src/app/config';
 
 const fastify = buildFastify({
   logger: {

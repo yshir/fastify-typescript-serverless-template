@@ -1,9 +1,9 @@
 import { FastifyReply, FastifyRequest } from 'fastify';
 import { FromSchema } from 'json-schema-to-ts';
 
+import { container } from '@src/app/provider';
+import { ProductService } from '@src/app/services/product-service';
 import { ProductId } from '@src/domain/product/product-id';
-import { container } from '@src/provider';
-import { ProductService } from '@src/services/product-service';
 
 import { getProductByIdSchema, getProductsSchema } from './schema';
 

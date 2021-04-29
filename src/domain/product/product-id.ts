@@ -1,4 +1,4 @@
-import { DomainException } from '@src/exceptions/domain-exception';
+import { DomainException } from '@src/lib/exceptions/domain-exception';
 import { genUuid, isUuid } from '@src/lib/uuid';
 import { ValueObject } from '@src/lib/value-object';
 

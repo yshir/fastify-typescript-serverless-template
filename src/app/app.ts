@@ -4,9 +4,9 @@ import fastifyFavicon from 'fastify-favicon';
 import fastifySensible from 'fastify-sensible';
 import fastifySwagger from 'fastify-swagger';
 
-import { config } from '@src/config';
+import { config } from '@src/app/config';
 // import { swaggerPlugin } from '@src/plugins/swagger-plugin';
-import routes from '@src/routes';
+import routes from '@src/app/routes';
 
 let fastify: FastifyInstance | null;
 

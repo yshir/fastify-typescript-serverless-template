@@ -28,7 +28,7 @@ package:
 functions:
   app:
     name: ${self:service}--${self:provider.stage}
-    handler: dist/bootstrap/lambda.handler
+    handler: dist/app/bootstrap/lambda.handler
     environment:
       APP_ENV: ${env:APP_ENV}
       NODE_ENV: ${env:NODE_ENV}

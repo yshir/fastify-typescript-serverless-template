@@ -1,4 +1,4 @@
-import { DomainException } from '@src/exceptions/domain-exception';
+import { DomainException } from '@src/lib/exceptions/domain-exception';
 import { ValueObject } from '@src/lib/value-object';
 
 type Value = typeof ProductStatus.STATUSES[number];

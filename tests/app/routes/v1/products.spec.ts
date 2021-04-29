@@ -1,6 +1,6 @@
 import { FastifyInstance } from 'fastify';
 
-import { buildFastify, closeFastify } from '@src/app';
+import { buildFastify, closeFastify } from '@src/app/app';
 
 let fastify: FastifyInstance | null;
 

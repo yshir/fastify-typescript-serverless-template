@@ -1,5 +1,5 @@
 import { ProductStatus } from '@src/domain/product/product-status';
-import { DomainException } from '@src/exceptions/domain-exception';
+import { DomainException } from '@src/lib/exceptions/domain-exception';
 
 describe('ProductStatus', () => {
   describe('construct', () => {

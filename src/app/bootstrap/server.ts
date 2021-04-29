@@ -1,5 +1,5 @@
-import { buildFastify } from '@src/app';
-import { config } from '@src/config';
+import { buildFastify } from '@src/app/app';
+import { config } from '@src/app/config';
 
 const { port } = config.app;
 const fastify = buildFastify({

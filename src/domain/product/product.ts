@@ -1,5 +1,5 @@
-import { DomainException } from '@src/exceptions/domain-exception';
 import { Entity } from '@src/lib/entity';
+import { DomainException } from '@src/lib/exceptions/domain-exception';
 
 import { ProductId } from './product-id';
 import { ProductName } from './product-name';
