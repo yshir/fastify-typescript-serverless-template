@@ -1,5 +1,6 @@
 import Fastify, { FastifyInstance, FastifyServerOptions } from 'fastify';
 import fastifyCors from 'fastify-cors';
+import fastifyFavicon from 'fastify-favicon';
 import fastifySensible from 'fastify-sensible';
 import fastifySwagger from 'fastify-swagger';
 
@@ -28,6 +29,7 @@ export const buildFastify = (opts: FastifyServerOptions = {}): FastifyInstance =
     },
     exposeRoute: true,
   });
+  fastify.register(fastifyFavicon);
   fastify.register(routes);
 
   return fastify;
