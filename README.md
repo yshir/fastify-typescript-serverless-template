@@ -15,13 +15,16 @@ Deployment to AWS Lambda using a serverless framework.
 ## Installation
 
 ```bash
+## Install dependencies
 $ npm i
+
+## Make .env file
+$ cp .env.sample .env
 ```
 
 ## Running the app
 
 ```bash
-# development
 $ npm run dev
 ```
 
@@ -30,3 +33,7 @@ $ npm run dev
 ```bash
 $ npm test
 ```
+
+## Deployment
+
+Merged into master, it will be automatically deployed to AWS Lambda by GitHub actions (requires to set up GitHub secrets)
