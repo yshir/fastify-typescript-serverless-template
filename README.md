@@ -2,9 +2,15 @@
 
 ## Description
 
-- [fastify](https://www.fastify.io/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [AWS Lambda](https://aws.amazon.com/lambda/)
+This repository is a template of fastify with typescript.
+
+- Fastify: https://www.fastify.io
+- TypeScript: https://www.typescriptlang.org
+
+Deployment to AWS Lambda using a serverless framework.
+
+- AWS Lambda: https://aws.amazon.com/lambda
+- Serverless Framework: https://www.serverless.com
 
 ## Installation
 
